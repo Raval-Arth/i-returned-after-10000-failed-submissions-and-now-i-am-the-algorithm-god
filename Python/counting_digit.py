@@ -1,3 +1,5 @@
+#  Scripture: “To know the enemy, first count its masks.”
+
 import math
 
 def countDigits(n):
