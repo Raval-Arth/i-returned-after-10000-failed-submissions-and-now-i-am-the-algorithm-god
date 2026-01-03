@@ -13,8 +13,16 @@ class Soution {
         }
     }
 
-    stock_buy_and_sell() {
+    stock_buy_and_sell(stocks) {
+        let maxProfit = 0
+        let min_stock = Infinity
+        for (let stock of stocks) {
+            min_stock = stock < min_stock ? stock : min_stock
+            let profit = stock - min_stock
+            maxProfit = Math.max(profit, maxProfit)
 
+        }
+        return maxProfit
     }
 }
 
