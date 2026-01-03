@@ -53,6 +53,18 @@ class Soution {
 
         return result
     }
+
+    max_sub_array(nums) {
+        let max_sum = nums[0]
+        let current_sum = nums[0]
+
+        for (let i = 1; i < nums.length; i++) {
+            current_sum = Math.max(nums[i], current_sum + nums[i])
+            max_sum = Math.max(max_sum, current_sum)
+        }
+
+        return max_sum
+    }
 }
 
 let obj = new Soution();
@@ -60,3 +72,4 @@ console.log(obj.two_sum([2, 7, 11, 15], 9));
 console.log(obj.stock_buy_and_sell([7, 1, 5, 3, 6, 4]))
 console.log(obj.contain_duplicate([1, 2, 3, 4]))
 console.log(obj.product_array_except_self([1, 2, 3, 4]))
+console.log(obj.max_sub_array([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
